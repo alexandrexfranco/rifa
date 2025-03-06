@@ -125,7 +125,7 @@ button:hover {
 /* Resultado */
 #resultado {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: #2c3e50;
     animation: fadeIn 0.5s ease-in; /* Animação de entrada */
@@ -164,3 +164,20 @@ button:hover {
 #share-whatsapp:hover {
     background-color: #128C7E;
 }
+
+        #donations {
+            text-align: center;
+            padding: 20px;
+        }
+        .qrcode {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+        @media (max-width: 600px) {
+            .qrcode {
+                max-width: 80%;
+            }
+        }

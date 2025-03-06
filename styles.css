@@ -1,0 +1,166 @@
+/* Importando uma fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Estilizando o corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Gradiente suave */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container principal */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    max-width: 900px;
+    width: 50%;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Campos de entrada */
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s; /* Transição suave */
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #3498db; /* Cor de destaque ao focar */
+    outline: none;
+}
+
+/* Botões */
+button {
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s; /* Efeitos de transição */
+}
+
+button:hover {
+    background: #2980b9; /* Mudança de cor ao passar o mouse */
+    transform: translateY(-2px); /* Leve elevação */
+}
+
+/* Grade de números */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.number {
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s, transform 0.2s; /* Animações suaves */
+}
+
+.number:hover {
+    background: #e0e0e0;
+    transform: scale(1.05); /* Zoom sutil ao passar o mouse */
+}
+
+.number.taken {
+    background: #e74c3c; /* Cor para números reservados */
+    color: white;
+    cursor: not-allowed;
+}
+
+/* Lista de participantes */
+.participante {
+    background: #f0f0f0;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Seções de estatísticas e lista */
+#listaParticipantes, #estatisticas {
+    text-align: left;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Resultado */
+#resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    animation: fadeIn 0.5s ease-in; /* Animação de entrada */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    }
+    input[type="text"], input[type="number"] {
+        max-width: 100%;
+    }
+}
+
+#share-whatsapp {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#share-whatsapp:hover {
+    background-color: #128C7E;
+}

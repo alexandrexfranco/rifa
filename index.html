@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio de Rifa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+       <div class="container">
+        <h1>Sorteio de Rifa</h1>
+        
+        <!-- Campo para definir o valor da rifa -->
+        <div>
+            <label for="valorRifa">Valor de cada rifa (R$):</label> 
+            <input type="number" id="valorRifa" placeholder="Ex: 5.00" step="0.01" min="0">
+        </div>
+        
+        <!-- Campo para nome do participante -->
+        <div>
+            <label for="nome">Nome do participante:</label> 
+            <input type="text" id="nome" placeholder="Digite o nome">
+        </div>
+        
+        <!-- Campo para números escolhidos -->
+        <div>
+            <label for="numerosEscolhidos">Números escolhidos:</label>
+            <input type="text" id="numerosEscolhidos" placeholder="Ex: 1, 5, 23" readonly><br>
+            <button onclick="adicionarParticipante()">Adicionar Participante</button>
+        </div>
+
+        <!-- Grade de números -->
+        <div class="grid" id="grid"></div>
+        
+        <!-- Lista de participantes -->
+        <div id="listaParticipantes">
+            <h3>Participantes</h3>
+        </div>
+        
+        <!-- Seção de estatísticas -->
+        <div id="estatisticas">
+            <h3>Estatísticas</h3>
+            <p>Total de participantes: <span id="totalParticipantes">0</span></p>
+            <p>Total de rifas vendidas: <span id="totalRifasVendidas">0</span></p>
+            <p>Valor total arrecadado: R$ <span id="valorArrecadado">0.00</span></p>
+            <p><button onclick="compartilharNoWhatsApp()">Compartilhar no WhatsApp</button></p>
+        </div>
+        
+        <!-- Botão de sorteio e resultado -->
+        <p><button onclick="sortear()">Realizar Sorteio</button>
+        <div id="resultado"></div></p>
+        <p><button id="nova-rifa">Nova Rifa</button></p>
+
+        <!-- Seção de DOAÇÃO -->
+    <div id="donations">
+        <h3>Faça uma doação!</h3>
+        <p>Se você sentir no seu coração o desejo de fazer uma doação de forma a incentivar o meu trabalho, escaneie o QR code abaixo com seu celular para doar de forma segura:</p>
+        <p><img src="https://i.ibb.co/8DhZcYJh/qrcode-pix.png" alt="QR Code para Doações"></p>
+        <p>Chave PIX: alexandrefranco.com@gmail.com</p>
+        <p>Nome: Alexandre de O. Franco</p>
+        <p>Código da transferência: DOACAOAPP</p>
+    </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

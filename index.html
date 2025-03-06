@@ -26,11 +26,20 @@
         <div>
             <label for="numerosEscolhidos">Números escolhidos:</label>
             <input type="text" id="numerosEscolhidos" placeholder="Ex: 1, 5, 23" readonly><br>
-            <button onclick="adicionarParticipante()">Adicionar Participante</button>
+            <p><button onclick="adicionarParticipante()">Adicionar Participante</button></p>
         </div>
 
         <!-- Grade de números -->
-        <div class="grid" id="grid"></div>
+        <div id="grid" class="grid"></div>
+    <script>
+        const grid = document.getElementById('grid');
+        for (let i = 1; i <= 200; i++) {
+            const num = document.createElement('div');
+            num.className = 'number';
+            num.textContent = i.toString().padStart(2, '0');
+            grid.appendChild(num);
+        }
+    </script>
         
         <!-- Lista de participantes -->
         <div id="listaParticipantes">

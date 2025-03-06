@@ -78,7 +78,6 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
     gap: 10px;
-    margin: 20px 0;
     justify-content: center;
 }
 
@@ -138,7 +137,7 @@ button:hover {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .grid {
         grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
     }
